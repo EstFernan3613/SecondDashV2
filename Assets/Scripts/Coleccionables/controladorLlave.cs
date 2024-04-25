@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class controladorLlave : MonoBehaviour
 {
-
-    public bool Adentro;
-
+   public bool Adentro;
     public Canvas activarCanvas;
-
     public GameObject llave;
+    public Animator puertaAnimator;
 
-     public Animator puertaAnimator;
+    // Referencia al TextMeshProUGUI para mostrar el contador de llaves
+    public TextMeshProUGUI contadorLlavesText;
 
-        void OnTriggerEnter2D(Collider2D other)
+    // Contador de llaves
+    private int contadorLlaves = 0;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -23,8 +26,7 @@ public class controladorLlave : MonoBehaviour
         }
     }
 
-
-       void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -34,24 +36,34 @@ public class controladorLlave : MonoBehaviour
         }
     }
 
-
-        void Update(){
-        if(Adentro == true && Input.GetKeyDown(KeyCode.C))
+    void Update()
+    {
+        if(Adentro && Input.GetKeyDown(KeyCode.C))
         {
-
             Destroy(this.gameObject);
-
             Debug.Log("llave recogida");
 
-             if (puertaAnimator != null)
+            // Incrementar el contador de llaves
+            contadorLlaves++;
+
+            // Actualizar el contador de llaves en el texto
+            UpdateLlavesText();
+
+            if (puertaAnimator != null)
             {
                 puertaAnimator.SetBool("AbrirPuerta", true);
             }
-            
         }
     }
-    
 
+    // Método para actualizar el texto del contador de llaves
+    void UpdateLlavesText()
+    {
+        if (contadorLlavesText != null)
+        {
+            contadorLlavesText.text = "Llaves: " + contadorLlaves.ToString();
+        }
+    }
 
 
 }

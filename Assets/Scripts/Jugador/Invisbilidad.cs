@@ -21,11 +21,14 @@ public class Invisbilidad : MonoBehaviour
      private string originalTag;
      private Animator animator;
 
+     private int originalLayer;
+
     void Start()
     {
        spriteRenderer = GetComponent<SpriteRenderer>();
         originalOpacity = spriteRenderer.color.a; // 
          originalTag = gameObject.tag;
+         originalLayer = gameObject.layer; 
          animator = GetComponent<Animator>();
     }
 
@@ -70,6 +73,7 @@ if (isCountingDownInvisibility)
         {
 
             ChangeTag("InvisiblePlayer");
+            ChangeLayer(LayerMask.NameToLayer("Invisible")); 
 
             
             StartCoroutine(PlayInvisibilityAnimation());
@@ -106,6 +110,7 @@ if (isCountingDownInvisibility)
      void RestoreOriginalOpacity()
     {
         ChangeOpacity(originalOpacity);
+         RestoreOriginalLayer();
         StartCooldown();
     }
 
@@ -125,6 +130,17 @@ if (isCountingDownInvisibility)
     {
         gameObject.tag = originalTag;
     }
+
+    void ChangeLayer(int newLayer)
+{
+    gameObject.layer = newLayer;
+}
+
+// Ajusta esta función para restaurar la capa original del jugador
+void RestoreOriginalLayer()
+{
+    gameObject.layer = originalLayer;
+}
 
        IEnumerator PlayInvisibilityAnimation()
     {
