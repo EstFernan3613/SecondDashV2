@@ -12,5 +12,11 @@ public class CambioEscena : MonoBehaviour
 
     }
 
+    public void Salir()
+    {
+        Debug.Log("Salir ...");
+        Application.Quit();
+    }
+
 
 }
