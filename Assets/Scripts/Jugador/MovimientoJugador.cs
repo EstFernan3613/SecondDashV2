@@ -32,6 +32,8 @@ public class MovimientoJugador : MonoBehaviour
 
     private bool salto = false;
 
+    [Header("Animacion")]
+
     private Animator animator;
 
     private void Start()
