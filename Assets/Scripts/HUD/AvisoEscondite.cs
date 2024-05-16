@@ -18,12 +18,15 @@ public class AvisoEscondite : MonoBehaviour
             texto.SetActive(true);
             Adentro1 = true;
             
-            
-            if(Adentro1 == true && Input.GetKeyDown(KeyCode.Z))
-            {
-            texto.SetActive(false);
-            }
+        }
+    }
 
+
+    void Update()
+    {
+        if(Adentro1 == true && Input.GetKeyDown(KeyCode.Z))
+        {
+            texto.gameObject.SetActive(false);
         }
     }
 
