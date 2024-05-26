@@ -22,7 +22,7 @@ public GameObject Texto1;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
         {
 
 
@@ -35,7 +35,7 @@ public GameObject Texto1;
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
         {
             Adentro1 = false;
             Debug.Log("Estamos fuera");

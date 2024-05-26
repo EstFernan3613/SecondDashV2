@@ -18,7 +18,7 @@ public class controladorLlave : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
         {
             Adentro = true;
             Debug.Log("estamos dentro");
@@ -28,7 +28,7 @@ public class controladorLlave : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
         {
             Adentro = false;
             Debug.Log("Estamos fuera");

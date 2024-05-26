@@ -12,7 +12,7 @@ public class MuerteCaida : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
         {
             Time.timeScale = 0f;
             MenuDeath.SetActive(true);

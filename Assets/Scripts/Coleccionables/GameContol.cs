@@ -13,6 +13,8 @@ public class GameContol : MonoBehaviour
 
     public GameObject puzzleR;
 
+    public Animator puertaAbrir;
+
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class GameContol : MonoBehaviour
         {
             youWin = true;
             puzzleR.SetActive(false);
+            puertaAbrir.SetBool("AbiertaPuerta", true);
         }
     }
 }
