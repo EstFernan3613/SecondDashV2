@@ -16,6 +16,11 @@ public class controladorLlave : MonoBehaviour
     // Contador de llaves
     private int contadorLlaves = 0;
 
+    void Awake()
+    {
+        llave.SetActive(false);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player" || other.gameObject.tag == "InvisiblePlayer")
