@@ -267,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11931694}
   - component: {fileID: 11931693}
+  - component: {fileID: 11931695}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -302,6 +303,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11931695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11931692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f90f177d5c27254bacc8f5f7f2ef772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelImage: {fileID: 1566646413}
+  maxAlpha: 0.8
+  alphaChangeSpeed: 0.5
+  sceneToLoad: MenuPrincipal
 --- !u!1 &42675151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7141,6 +7158,7 @@ MonoBehaviour:
   - {fileID: 543616737}
   - {fileID: 205123474}
   puzzleR: {fileID: 650633422}
+  puertaAbrir: {fileID: 0}
 --- !u!4 &1426769513
 Transform:
   m_ObjectHideFlags: 0
@@ -30416,10 +30434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  panelImage: {fileID: 1566646413}
-  maxAlpha: 0.8
-  alphaChangeSpeed: 0.5
-  sceneToLoad: MenuPrincipal
+  panelController: {fileID: 11931695}
 --- !u!1 &1908085619
 GameObject:
   m_ObjectHideFlags: 0
