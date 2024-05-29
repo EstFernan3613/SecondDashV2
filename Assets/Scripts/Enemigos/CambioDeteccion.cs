@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine;
 
 public class CambioDeteccion : MonoBehaviour
 {
@@ -20,9 +18,15 @@ public class CambioDeteccion : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("InvisiblePlayer"))
+        if (other.CompareTag("Player"))
         {
             panelController.SetPlayerDetected(false);
+            Debug.Log("Player exited detection zone");
+        }
+        else if (other.CompareTag("InvisiblePlayer"))
+        {
+            panelController.SetPlayerDetected(false);
+            Debug.Log("Invisible Player exited detection zone");
         }
     }
 }
