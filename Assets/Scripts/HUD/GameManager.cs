@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform gameTransform;
   [SerializeField] private Transform piecePrefab;
 
+  [SerializeField] private GameObject keyObject; 
+
   private List<Transform> pieces;
   private int emptyLocation;
   private int size;
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
     public HUD hud;
 
     private int vidas = 3;
+
+    [SerializeField] private GameObject Puzzle; 
 
 
 
@@ -38,7 +42,7 @@ public class GameManager : MonoBehaviour
  void Start()
  {
     pieces = new List<Transform>();
-    size = 4;
+    size = 3;
     CreateGamePieces(0.01f);
  }
     private void CreateGamePieces(float gapThickness) {
@@ -105,6 +109,8 @@ public class GameManager : MonoBehaviour
     if (!shuffling && CheckCompletion()) {
       shuffling = true;
       StartCoroutine(WaitShuffle(0.5f));
+      keyObject.SetActive(true);  // Activa la llave
+      Puzzle.SetActive(false);
     }
 
     // On click send out ray to see if we click a piece.
