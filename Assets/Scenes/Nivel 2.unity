@@ -626,11 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0da4f4325082c49848e3afa83e5539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTransform: {fileID: 1375896957}
-  piecePrefab: {fileID: 1375896957}
-  keyObject: {fileID: 1461456447}
   hud: {fileID: 32024553}
-  Puzzle: {fileID: 1461456447}
 --- !u!4 &90278435
 Transform:
   m_ObjectHideFlags: 0
@@ -1182,7 +1178,7 @@ Transform:
   m_GameObject: {fileID: 307398590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.82, y: 0, z: 0}
+  m_LocalPosition: {x: 3.82, y: 0, z: 1.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9736,7 +9732,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 918640579}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bec540db695db7448ac6883fa8447a4e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
