@@ -30939,9 +30939,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2056915145}
   - component: {fileID: 2056915144}
-  - component: {fileID: 2056915147}
   - component: {fileID: 2056915148}
   - component: {fileID: 2056915149}
+  - component: {fileID: 2056915150}
   m_Layer: 0
   m_Name: Llave
   m_TagString: Llave
@@ -31016,23 +31016,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2056915147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056915143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c9b1330be61764bb5c665a0cd2c84f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Adentro: 0
-  activarCanvas: {fileID: 142551882}
-  llave: {fileID: 2056915143}
-  puertaAnimator: {fileID: 381448740}
-  contadorLlavesText: {fileID: 103383533}
 --- !u!61 &2056915148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31099,6 +31082,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2056915150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056915143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985d8c90c844e26458722fc7fef2998e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Adentro: 0
+  activarCanvas: {fileID: 142551882}
+  llave: {fileID: 2056915143}
+  puertaAnimator: {fileID: 381448740}
+  contadorLlavesText: {fileID: 103383533}
 --- !u!1 &2090634615
 GameObject:
   m_ObjectHideFlags: 0
